@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 200px;  /* Set font size to 90px */
+    margin: 0;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 20px;  /* Increased font size for subtitle */
+    color: #666;
+    margin: 20px 0 60px;  /* Increased margins for better spacing */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;  /* Increased gap between buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #F4F1EB;
+}
