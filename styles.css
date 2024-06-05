@@ -14,21 +14,35 @@ body {
 }
 
 h1 {
-    font-size: 6em; 
+    font-size: 6em;
     margin: 0;
     color: #000;
+    transition: transform 0.3s, text-decoration 0.3s;
 }
 
 .subtitle {
-    font-size: 1.2em; 
+    font-size: 1.2em;
     color: #666;
-    margin: 20px 0 60px; 
+    margin: 10px 0 60px;
+}
+
+.h1-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.3s, text-decoration-thickness 0.3s;
+}
+
+.h1-link:hover {
+    transform: scale(1.1); /* Zoom to 110% */
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Thinner underline */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 40px;  /* Increased gap between buttons */
+    gap: 40px;
 }
 
 .button {
