@@ -1,7 +1,10 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Staatliches&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Libre Franklin', Arial, sans-serif;
     background-color: #f5f3ef;
     display: flex;
     justify-content: center;
@@ -14,9 +17,10 @@ body {
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 8em;
     margin: 0;
     color: #0B1215;
+    font-family: 'Staatliches', cursive;
     transition: transform 0.3s;
     display: inline-block;
     position: relative;
@@ -82,27 +86,45 @@ h1 {
 .menubar {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     background-color: #f5f3ef;
-    padding: 20px 0; /* Add padding to create space around the menubar */
+    padding: 20px 40px; /* Add padding to create space around the menubar */
+    font-family: 'Staatliches', cursive;
     position: absolute;
     top: 0;
+    left: -20px;
 }
 
 .menubar a {
     text-decoration: none;
-    font-size: 20px;
-    color: #666;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    color: #0B1215;
+    transition: transform 0.3s ease; /* Only apply transform effect */
+    position: relative; /* Required for the ::after pseudo-element */
 }
 
 .menubar a:hover {
     transform: scale(1.1); /* Zoom to 110% */
 }
+.menubar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Adjust this value to set the distance between text and underline */
+    height: 1px;
+    background-color: #0B1215;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
 
+.menubar a:hover::after {
+    transform: scaleX(1);
+}
 .container {
     text-align: center;
-    margin-top: 20px; /* Adjust margin to create space below the menubar */
+    margin-top: 80px; /* Adjust margin to create space below the menubar */
 }
 
 .intro-text {
@@ -175,4 +197,65 @@ h1 {
 .viz-button:hover#python {
     background-color: #0B1215;
     color: #f5f3ef;
+}
+
+.gallery-container {
+    margin: 0 auto;
+    max-width: 1000px; /* Adjust the maximum width of the container */
+    padding-top: 80px; /* Ensure space from the top */
+    padding-bottom: 80px; /* Added padding to the bottom */
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px 20px; /* Add padding to the top, bottom, left and right */
+    gap: 20px; /* Add gap between the items */
+}
+
+.gallery-item {
+    display: block;
+    width: 300px;
+    text-decoration: none;
+    padding: 20px;
+    color: #0B1215;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'Staatliches';
+    color: #0B1215;
+    font-weight: bold;
+}
+
+.description p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+.sub p {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #999;
 }
