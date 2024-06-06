@@ -17,26 +17,43 @@ h1 {
     font-size: 6em;
     margin: 0;
     color: #000;
-    transition: transform 0.3s, text-decoration 0.3s;
+    transition: transform 0.3s;
+    display: inline-block;
+    position: relative;
 }
 
 .subtitle {
     font-size: 1.2em;
     color: #666;
-    margin: 10px 0 60px;
+    margin: 20px 0 60px;
 }
 
 .h1-link {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-    transition: transform 0.3s, text-decoration-thickness 0.3s;
+    position: relative; /* Ensure the ::after is positioned relative to the link */
 }
 
-.h1-link:hover {
+.h1-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Adjust this value to set the distance between text and underline */
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+.h1-link:hover::after {
+    transform: scaleX(1);
+}
+
+.h1-link:hover h1 {
     transform: scale(1.1); /* Zoom to 110% */
-    text-decoration: underline;
-    text-decoration-thickness: 2px; /* Thinner underline */
 }
 
 .button-container {
