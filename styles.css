@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 6em;
     margin: 0;
     color: #0B1215;
     font-family: 'Staatliches', cursive;
@@ -97,7 +97,7 @@ h1 {
 
 .menubar a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     color: #0B1215;
     transition: transform 0.3s ease; /* Only apply transform effect */
     position: relative; /* Required for the ::after pseudo-element */
