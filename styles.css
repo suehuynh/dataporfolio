@@ -1,12 +1,14 @@
-/* Global Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f3ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Styles for index.html */
 .container {
     text-align: center;
 }
@@ -100,7 +102,7 @@ h1 {
 
 .container {
     text-align: center;
-    margin-top: 100px; /* Adjust margin to create space below the menubar */
+    margin-top: 20px; /* Adjust margin to create space below the menubar */
 }
 
 .intro-text {
