@@ -20,7 +20,7 @@ h1 {
     font-size: 6em;
     margin: 0;
     color: #0B1215;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Staatliches';
     transition: transform 0.3s;
     display: inline-block;
     position: relative;
