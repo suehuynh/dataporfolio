@@ -272,3 +272,20 @@ h1 {
     flex: 2.5;
     padding: 0 20px;
 }
+/* Link styles */
+a {
+    color: black; /* Set link color to black */
+    text-decoration: underline; /* Always underline links */
+}
+
+a:visited {
+    color: #555; /* Set visited link color to black */
+}
+
+a:hover {
+    color: black; /* Ensure hover link color is also black */
+}
+
+a:active {
+    color: black; /* Ensure active link color is also black */
+}
