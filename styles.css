@@ -202,8 +202,8 @@ h1 {
 .gallery-container {
     margin: 0 auto;
     max-width: 1000px; /* Adjust the maximum width of the container */
-    padding-top: 80px; /* Ensure space from the top */
-    padding-bottom: 80px; /* Added padding to the bottom */
+    padding-top: 20px; /* Ensure space from the top */
+    padding-bottom: 20px; /* Added padding to the bottom */
 }
 
 .intro-text {
@@ -262,7 +262,7 @@ h1 {
 .content-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 .column {
     flex: 1;
