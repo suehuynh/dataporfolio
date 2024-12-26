@@ -1,0 +1,148 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&family=Staatliches&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', Arial, sans-serif;
+    background-color: #f5f3ef;
+    display: flex;
+    flex-direction: column; /* Adjust for a vertical layout */
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent accidental horizontal scrolling on the page */
+}
+
+.container {
+    text-align: center;
+    margin-top: 80px; /* Adjust margin to create space below the menubar */
+}
+
+/* Adjust heading */
+h1 {
+    font-size: 2.5em;
+    margin: 100px 0 20px; /* Top margin ensures spacing from the top */
+    color: #0B1215;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+
+/* Subtitle styles */
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0 60px;
+}
+
+/* Gallery container */
+.gallery-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-top: 20px; /* Space between the heading and gallery */
+    padding-bottom: 80px; /* Added padding to the bottom */
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scroll inside the gallery container */
+    white-space: nowrap; /* Ensure items don't wrap onto a new line */
+    padding: 20px 20px; /* Add padding to the top, bottom, left, and right */
+    gap: 20px; /* Add gap between the items */
+}
+
+.gallery-item {
+    flex: 0 0 25%;
+    max-width: 500px;
+    min-width: 200px;
+    text-decoration: none;
+    padding: 20px;
+    color: #0B1215;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'Staatliches';
+    color: #0B1215;
+    font-weight: bold;
+}
+
+.description p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.sub p {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #999;
+}
+
+/* Menubar */
+.menubar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f5f3ef;
+    padding: 20px 40px; /* Add padding to create space around the menubar */
+    font-family: 'Staatliches', cursive;
+    position: fixed; /* Ensure menubar stays at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keep menubar on top */
+}
+
+/* Link styles */
+.menubar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0B1215;
+    transition: transform 0.3s ease; /* Only apply transform effect */
+    position: relative; /* Required for the ::after pseudo-element */
+}
+
+.menubar a:hover {
+    transform: scale(1.1); /* Zoom to 110% */
+}
+
+.menubar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Adjust this value to set the distance between text and underline */
+    height: 1px;
+    background-color: #0B1215;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.menubar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Ensure consistent scrolling behavior */
+body {
+    overflow-y: auto;
+}
